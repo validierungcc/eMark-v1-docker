@@ -18,7 +18,7 @@ minimal example docker-compose.yml
                 - '4555:4555'
                 - '127.0.0.1:4444:4444'
             volumes:
-                - 'emark:/emark/.eMark-volume-2'
+                - 'emark:/emark/.eMark'
     volumes:
        emark:
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 set -meuo pipefail
 
-EMARK_DIR=/emark/.eMark-volume-2/
-EMARK_CONF=/emark/.eMark-volume-2/eMark.conf
+EMARK_DIR=/emark/.eMark/
+EMARK_CONF=/emark/.eMark/eMark.conf
 
 if [ -z "${EMARK_RPCPASSWORD:-}" ]; then
   # Provide a random password.
@@ -12,7 +12,7 @@ fi
 if [ ! -e "${EMARK_CONF}" ]; then
   tee -a >${EMARK_CONF} <<EOF
 server=1
-rpcuser=${EMARK_RPCUSER:-emarkrpc}
+rpcuser=${EMARK_RPCUSER:-emarkv1rpc}
 rpcpassword=${EMARK_RPCPASSWORD}
 rpcclienttimeout=${EMARK_RPCCLIENTTIMEOUT:-30}
 EOF
@@ -20,7 +20,7 @@ echo "Created new configuration at ${EMARK_CONF}"
 fi
 
 if [ $# -eq 0 ]; then
-  /emark/eMark/src/eMarkd -rpcbind=:4444 -rpcallowip=* -printtoconsole=1
+  /emark/eMark/src/eMarkd -rpcbind=:6666 -rpcallowip=* -printtoconsole=1
 else
   exec "$@"
 fi
