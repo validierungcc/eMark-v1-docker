@@ -1,5 +1,7 @@
 **Deutsche eMark**
 
+THIS IS THE DISCONTINUED BLOCKCHAIN, ALL BALANCES WERE TRANSFERRED TO V2
+
 https://github.com/validierungcc/eMark-v1-docker
 
 https://deutsche-emark.org/
