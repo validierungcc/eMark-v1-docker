@@ -12,7 +12,7 @@ minimal example docker-compose.yml
      services:
          emark:
              container_name: emark-v1
-             image: emark-v1:1.6.1.1
+             image: vfvalidierung/deutsche_emark-v1:1.6.1.1
              restart: unless-stopped
              ports:
                  - '5556:5556'
