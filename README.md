@@ -12,7 +12,7 @@ minimal example docker-compose.yml
      ---
      version: '3.9'
      services:
-         emark:
+         emark-v1:
              container_name: emark-v1
              image: vfvalidierung/deutsche_emark-v1:1.6.1.1
              restart: unless-stopped
